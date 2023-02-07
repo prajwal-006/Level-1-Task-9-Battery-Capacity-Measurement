@@ -1,0 +1,10 @@
+int sensorPin = A0; // select the input pin for the voltage divider
+int voltage; 
+void setup() {
+  Serial.begin(9600); // setup serial communication at 9600 baud
+}
+void loop() {
+  voltage = analogRead(sensorPin); // read the voltage value from the voltage divider
+  Serial.println(voltage); // print the voltage value to the serial monitor
+  delay(1000); // wait for 1 second
+}
